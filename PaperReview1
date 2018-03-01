@@ -1,0 +1,42 @@
+Computer Graphics
+
+Paper Review-1
+
+
+ 
+
+
+Nithya Vasantha Kumar
+01689975
+
+
+
+
+
+
+
+
+
+ACM Transactions on Graphics(TOG)
+Major research is being carried out in the field of transactions on graphic and major breakthroughs are found in the field of computer aided design, synthetic image generation, rendering, solid modeling etc. Some of the research papers selected for review under this topic are Interactive High-quality Green-Screen Keying via Color Mixing and Real time data driven deformation using kernel canonical correlation analysis.
+
+1. Interactive High-quality Green-Screen Keying via Color Mixing
+Keying is the process of capturing the performance of actors and other actions against a green background and later obtaining a RGBA foreground layer corresponding to the green background on which the elements are captured is called keying and it is usually the first step of digital composting workflow. After all these processes the foreground layers are combined t obtain a composite shot. In this paper they demonstrate a method in which the application which performs color unmixing framework to the green screen keying. 
+
+STRENGTH: This paper provides a method of color unmixing in which the result obtained from this method consistently outperforms many software available in the market for natural matting and green screen keying. This method is suitable for parallel computation. This method is effective and provides the result of 1080p frame in just 10s for local color estimation and 3s for color unmixing which is a total of 13s, this is explained to fall to a timing of just 4s for an image sequence. A statistical validation is carried out by the team in which they generated 480 images which contained overlapping of 2 to 3 images and unmixing of colors was carried out which provided a result hard to distinguish by the human observer. Using the commercially available tool it is found out that the evaluation of synthetic video would take up to 120min and this software developed could do the same work in about 10min, and the results obtained were even better than the commercial tools. The main problems faced in expectation maximization is that the in ability to distinguish between color spill and clean area, but the scribble interface provides a option to the user to define the color spill and clean areas. This software developed seems to be significantly fast in terms of processing an image on comparison to a human worker since it takes only an hour to perform all tests unlike a human can take approximately 12h. 
+
+WEAKNESS: This software works fine only under constant illumination but, the process of keying is always performed outdoors which adds a constraint in low lighting where this software may fail in operation. Global color model does not effectively represent non-green background. This software is also seen to fail when the assumptions made are satisfied but, we can’t always expect our surroundings to be under our assumptions and this seems to be a significant failure in reality without further improvement. In scribble interface to extract the color model we need at least one frame of unmixed color due to which smoke and transparent media cannot be identified clearly during this condition. We can conclude from this that only colored objects and background are used for experiments and does not work in real time need. This algorithm calculates the value of alpha which may be overestimated which may vary the color and may not meet the requirements of the customers.
+
+2. Real Time Data Driven Deformation Using Kernel Canonical Correlation Analysis
+This paper provides an intuitive way of animation in which an interface creates simultaneous control of deformation of a large region with minimal control points. This method learns from constant training about the deformation and fly accordingly. This algorithm follows CCA (Canonical Correlation Analysis). A powerful animation is one in which a minimum control points are used to create a large deformation area. The method proposed in this paper provides a real time animation by learning from trained examples.
+
+STRENGTH: Experiments are carried out on deformations of facial expression and cloth which is a real time testing example, they have used Gaussian kernel to get a better result. This method is capable of producing a better deformation on training on sparse bending styles which can produce a novel deformation. This algorithm provides a hybrid deformation predictor which can combine examples from different styles. On comparison to the softwares available in the market on comparison of results we see the that the deformations observed are near similar to market standards which is a major plus point in the is algorithm. The test results also show that the method is faster than some of the available software and can handle more frames in order of two. This method also seems to be scalable since it can achieve more than 100 frames per second.
+
+WEAKNESS: First, the control points have to be specified before regression and fixed in subsequent animations which shows that the system learns only from the given control points and not more than that. Further optimization is needed to change control points and rebuild the regression model at run-time. Second, the predicted deformations are not always localized when moving control points which is an hinderance to real time application. This is undesirable when precise control is necessary. However, in typical data-driven animations, the movement of control points are not independent but highly correlated. Finally, this system is a example driver method therefore the system may not produce results when there is no available data on a particular deformation. 
+
+
+
+
+
+
+
